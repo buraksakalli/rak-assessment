@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Multi Step Poll
 
-## Getting Started
+## Prerequisites
 
-First, run the development server:
+Before you begin, ensure you have the following installed on your machine:
+
+- Node.js: Make sure you have the correct Node.js version installed. The application requires Node.js version ^18.18.0 || ^20.9.0 || >=21.1.0.
+
+## Installation
+
+1- Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/buraksakalli/rak-assessment.git
+cd rak-assessment
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2- Install the dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Running the Application
 
-## Learn More
+1- Update the `.env` file with the correct `API_URL`. The default value is `http://localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
+2- Start the development server: Run the following command to start the application in development mode:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This will start the app and watch for changes. The server will typically run at `http://localhost:3000`.
 
-## Deploy on Vercel
+3- Open your browser and navigate to `http://localhost:3000` to view the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Running the Tests
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To run the tests, run the following command:
+
+```bash
+yarn test
+```
+
+This will run the tests and display the results in the terminal.
