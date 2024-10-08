@@ -1,0 +1,24 @@
+name: Testing
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: node.js setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21.0.0
+
+      - name: Run install command
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: Test the app
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test
